@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kids Sticker Creator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Create your Label</h1>
+
+      <div class="form-section">
+        <label for="name">Student Name:</label>
+        <input type="text" id="name" placeholder="Enter name" />
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" placeholder="Enter age" />
+
+        <label for="standard">Standard:</label>
+        <input type="text" id="standard" placeholder="Enter standard" />
+
+        <label for="section">Section:</label>
+        <input type="text" id="section" placeholder="Enter section" />
+
+        <label for="school">School:</label>
+        <input type="text" id="school" placeholder="Enter school name" />
+
+        <label for="uploadImage">Upload Kid's Image:</label>
+        <input type="file" id="uploadImage" accept="image/*" />
+      </div>
+
+      <div class="controls-section">
+        <button onclick="moveImage('left')">Move Left</button>
+        <button onclick="moveImage('right')">Move Right</button>
+        <button onclick="moveImage('up')">Move Up</button>
+        <button onclick="moveImage('down')">Move Down</button>
+        <button onclick="rotateImage('cw')">Rotate Clockwise</button>
+        <button onclick="rotateImage('ccw')">Rotate Counter-Clockwise</button>
+        <button onclick="zoomImage('in')">Zoom In</button>
+        <button onclick="zoomImage('out')">Zoom Out</button>
+        <button onclick="flipImage('horizontal')">Flip Horizontal</button>
+        <button onclick="flipImage('vertical')">Flip Vertical</button>
+      </div>
+
+      <!-- Button to generate the label -->
+      <button id="generateLabel" onclick="addLabel()">Generate Label</button>
+
+      <canvas id="stickerCanvas" width="800" height="400"></canvas>
+      <button id="saveSticker" onclick="saveSticker()">Download Sticker</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
